@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apoptosis</title>
+    <meta name="description" content="my Image">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky src="images/bbg.jpg" radius="30"></a-sky>
+
+      <!-- Gltf Models for sun -->
+      <a-asset-item id="sun3"                                             src="images/sun3.gltf">
+     </a-asset-item>
+
+     <a-asset-item id="sunbg"                                             src="images/sunbg.gltf">
+    </a-asset-item>
+
+    <a-asset-item id="face"                                             src="images/palette.gltf">
+    </a-asset-item>
+
+    <a-asset-item id="body"                                             src="images/body.gltf">
+    </a-asset-item>
+
+    <a-asset-item id="leftarm"                                             src="images/leftarm.gltf">
+    </a-asset-item>
+
+    <a-asset-item id="rightarm"                                             src="images/rightarm.gltf">
+    </a-asset-item>
+
+     <a-entity gltf-model="#sun3"
+                      position="0 0 0" rotation="0 -90 0">
+            </a-entity>
+
+    <a-entity gltf-model="#sunbg"
+            position="-1 0 -2" rotation="0 -90 0">
+            </a-entity>
+
+    <a-entity gltf-model="#face"
+            position="0.5 -2.5 -2" rotation="10 100 0" scale="2.5 2.5 2.5">
+            </a-entity>
+
+    <a-entity gltf-model="#body"
+            position="-2 1 -4" rotation="0 0 0" scale="2.5 2.5 2.5">
+            </a-entity>
+
+    <a-entity gltf-model="#leftarm"
+            position="-3 2.5 -1" rotation="0 -60 0" scale="1.5 1.5 1">
+            </a-entity>
+
+    <a-entity gltf-model="#rightarm"
+            position="3 -1 0" rotation="-10 -90 0" scale="1 1 1">
+            </a-entity>
+
+
+    <!-- squiggles -->
+
+    <a-torus-knot 
+        color="#0e5a2b"
+        arc="180" 
+        p="3" 
+        q="2" 
+        radius="5" 
+        radius-tubular="0.1" 
+        rotation="60 40 0" 
+        position="-8 7 0"
+        animation="property: rotation; to: 60 60 0; loop: true; dur: 5000; dir: alternate; easing: linear">
+    </a-torus-knot>
+
+    <a-torus-knot 
+        color="#0e5a2b" 
+        arc="180" 
+        p="3" 
+        q="2" 
+        radius="5" 
+        radius-tubular="0.1" 
+        rotation="0 100 0" 
+        position="9 3 1"
+        animation="property: rotation; to: 0 100 20; loop: true; dur: 5000; dir: alternate; easing: linear">
+    </a-torus-knot>
+
+    <a-torus-knot 
+        color="#0e5a2b" 
+        arc="180" 
+        p="3" 
+        q="2" 
+        radius="5" 
+        radius-tubular="0.1" 
+        rotation="180 104 90" 
+        position="-9 -5 2.85"
+        animation="property: rotation; to: 180 104 60; loop: true; dur: 5000; dir: alternate; easing: linear">
+    </a-torus-knot>
+
+    <a-torus-knot 
+        color="#0e5a2b" 
+        arc="180" 
+        p="3" 
+        q="2" 
+        radius="5" 
+        radius-tubular="0.1" 
+        rotation="80 0 180" 
+        position="2 -7 -1" 
+        animation="property: rotation; to: 80 20 180; loop: true; dur: 5000; dir: alternate; easing: linear">
+    </a-torus-knot>
+
+    <!-- Camera -->
+    <a-entity position="0 0 15" rotation="-5 0 0">
+        <a-camera></a-camera>
+    </a-entity>
+
+      <a-light type="ambient" color="#666"></a-light>
+      <a-light type="point" intensity="" position="0 0 15"></a-light>
+    </a-scene>
+  </body>
+</html>
